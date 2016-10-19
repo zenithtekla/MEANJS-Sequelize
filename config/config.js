@@ -224,6 +224,8 @@ var initGlobalConfig = function () {
     validateSessionSecret: validateSessionSecret
   };
 
+  config.endpoints = [];
+
   return config;
 };
 

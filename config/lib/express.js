@@ -41,6 +41,7 @@ module.exports.initLocalVariables = function (app) {
   app.locals.favicon = config.favicon;
   app.locals.env = process.env.NODE_ENV;
   app.locals.domain = config.domain;
+  app.locals.endpoints = config.endpoints;
 
   // Passing the request url to environment locals
   app.use(function (req, res, next) {
