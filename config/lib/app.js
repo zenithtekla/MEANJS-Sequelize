@@ -6,6 +6,8 @@
 var config = require('../config'),
   mongoose = require('./mongoose'),
   express = require('./express'),
+  sequelize = require('./sequelize-connect'),
+  winston = require('./winston'),
   chalk = require('chalk'),
   seed = require('./seed');
 

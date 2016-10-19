@@ -3,9 +3,11 @@
 module.exports = {
   app: {
     title: 'MEAN.JS',
-    description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
-    googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
+    domain: 'http://ESP21:3000',
+    description: 'Full-Stack JavaScript with MongoDB, Express, SequelizeJS, AngularJS, and Node.js',
+    keywords: 'sequelizejs, mongodb, express, angularjs, node.js, mongoose, passport, socket.io',
+    googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID',
+    reCaptchaSecret: process.env.RECAPTCHA_SECRET || ''
   },
   db: {
     promise: global.Promise
@@ -15,6 +17,9 @@ module.exports = {
   // DOMAIN config should be set to the fully qualified application accessible
   // URL. For example: https://www.myapp.com (including port if required).
   domain: process.env.DOMAIN,
+  sean: {
+    templateEngine: 'swig'
+  },
   // Session Cookie settings
   sessionCookie: {
     // session expiration is set by default to 24 hours

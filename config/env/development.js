@@ -12,6 +12,17 @@ module.exports = {
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
+  rdbms: {
+    name: process.env.DB_NAME || 'mantis_live',
+    host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 3306,
+    username: process.env.DB_USERNAME || 'root',
+    password: process.env.DB_PASSWORD || 'KTMEi',
+    dialect: process.env.DB_DIALECT || 'mysql', // mysql, postgres, sqlite3,...
+    enableSequelizeLog: true,
+    ssl: process.env.DB_SSL || false,
+    sync: process.env.DB_SYNC || true // Synchronizing any model changes with database
+  },
   log: {
     // logging with Morgan - https://github.com/expressjs/morgan
     // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
@@ -22,6 +33,9 @@ module.exports = {
       maxsize: 10485760,
       maxFiles: 2,
       json: false
+    },
+    options: {
+      // stream: 'access.log'
     }
   },
   app: {

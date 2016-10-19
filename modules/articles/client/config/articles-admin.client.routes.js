@@ -54,6 +54,8 @@
   function getArticle($stateParams, ArticlesService) {
     return ArticlesService.get({
       articleId: $stateParams.articleId
+    }, function(data) {
+      console.log(data);
     }).$promise;
   }
 

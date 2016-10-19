@@ -146,6 +146,9 @@ var initGlobalConfigFiles = function (config, assets) {
   // Setting Globbed model files
   config.files.server.models = getGlobbedPaths(assets.server.models);
 
+  // Setting Globbed rdbmsModel files
+  config.files.server.rdbmsModels = getGlobbedPaths(assets.server.rdbmsModels);
+
   // Setting Globbed route files
   config.files.server.routes = getGlobbedPaths(assets.server.routes);
 
@@ -220,6 +223,8 @@ var initGlobalConfig = function () {
     getGlobbedPaths: getGlobbedPaths,
     validateSessionSecret: validateSessionSecret
   };
+
+  config.dbService = ['mongoose', 'sequelize'];
 
   return config;
 };
