@@ -224,8 +224,6 @@ var initGlobalConfig = function () {
     validateSessionSecret: validateSessionSecret
   };
 
-  config.dbService = ['mongoose', 'sequelize'];
-
   return config;
 };
 

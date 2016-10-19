@@ -47,7 +47,7 @@ db.connect = function(database, username, password, options) {
 
   db.sequelize = sequelize;
 
-  winston.info('Finished Connecting to Database');
+  winston.info('Finished Connecting to RDBMS Database');
 
   return true;
 };
